@@ -20,6 +20,7 @@ Observação: As cores são geradas de acordo com o tipo do pokemon.
 - React
   Dentre os recursos usados estão: estado global, hooks e router
 - API ->https://pokeapi.co/
+- Axios
 
 ## ⚙️ Imagem da versão atual:
 ![image](https://user-images.githubusercontent.com/56547690/171903810-63d13c11-ab53-4c86-ae22-b3eb176dd3ff.png)
