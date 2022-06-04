@@ -3,17 +3,14 @@ import Header from "../../components/Header/Header";
 import CardsPokemon from "../../components/CardsPokemon/CardsPokemon";
 import GlobalStateContext from "../../globalState/GlobalStateContext";
 import { HomeListContainer, HomeContainer } from './styled'
-import axios from "axios";
-import { BASE_URL } from '../../constantes/BASE_URL'
-
 
 
 const Home = () => {
 
-    const {pokeName,setPokeName, pokemonList, setPokemonList} = useContext(GlobalStateContext)
+    const {pokemonList} = useContext(GlobalStateContext)    
 
     const renderPokeList = pokemonList.map((pokemon)=>{
-        // console.log(pokemon.types[0].type.name)
+       
         let color = ''
         switch (pokemon.types[0].type.name) {
             case 'water':
@@ -47,7 +44,7 @@ const Home = () => {
                 color='white'
             break;
         }
-        // console.log(pokemon.types[0].type.name,'color', color)
+        
         return <CardsPokemon color={color} pokemon={pokemon}/>
         
     })
@@ -56,7 +53,7 @@ const Home = () => {
         <HomeContainer>
             <Header />
             <HomeListContainer>
-                {renderPokeList}
+                {renderPokeList.length ? renderPokeList : <p> Carregando...</p>}
             </HomeListContainer>
         </HomeContainer>
     )

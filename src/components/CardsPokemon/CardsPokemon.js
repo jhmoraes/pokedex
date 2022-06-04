@@ -6,9 +6,7 @@ import { CardContainer, CardInfos, CardBar } from './styled'
 
 const CardsPokemon = (props) => {
 
-    const navigate = useNavigate()
-
-    
+    const navigate = useNavigate()    
 
     return (
 
