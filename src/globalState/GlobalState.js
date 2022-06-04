@@ -45,8 +45,46 @@ const GlobalState = (props) => {
             .catch((err) => { console.log(err) })
     }
 
+    const colorPokemon = (typePokemon) =>{
 
-    const data = { pokeName, setPokeName, pokemonList, setPokemonList }
+        let color = ''
+        switch (typePokemon) {
+            case 'water':
+                color='blue'
+            break;
+            case 'fire':
+                color='red'
+            break;
+            case 'bug':
+                color='pink'
+            break;
+            case 'grass':
+                color='green'
+            break;
+            case 'normal':
+                color='yellow'
+            break;
+            case 'electric':
+                color='#FF4500'
+            break;
+            case 'ground':
+                color='#884513'
+            break;
+            case 'poison':
+                color='#836fff'
+            break;
+            case 'fairy':
+                color='#ff00ff'
+            break;
+            default:
+                color='white'
+            break;
+        }
+
+        return color
+    }
+
+    const data = { pokeName, setPokeName, pokemonList, setPokemonList, colorPokemon }
 
 
 

@@ -4,14 +4,16 @@ import styled from "styled-components";
 export const PokeDatailsContainer = styled.div`
     display: flex;
     justify-content: center;
-    align-items: end;
-    height: 85vh;
+    align-items: center;
+    height: 80vh;
 `
 
 export const PokemonCardDetails = styled.div`
+
     width: 25vw;
     height: 60vh;
-    background-color: #EEEEEE;
+    background-color: #ffff;
+    border: 10px solid ${props => props.color};
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -26,4 +28,14 @@ export const PokemonCardDetails = styled.div`
     }
     
 `
+
+export const ButtonBack = styled.div`
+    margin: 1.5em 0 0 5em;
+    background-color: red;
+    border-radius: 30px;
+    width: 6vw;
+    height: 9vh;
+    cursor: pointer;
+`
+
 
